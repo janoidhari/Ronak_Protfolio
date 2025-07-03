@@ -1,0 +1,203 @@
+/* Reset & Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: #1a1a40;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+/* Hero Section */
+#hero {
+  background: linear-gradient(to right, #1a1a40, #0077cc);
+  color: white;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0097a7;
+}
+
+/* Sections */
+section {
+  padding: 2.5rem 2rem;
+}
+
+.project {
+  background: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid #0077cc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1a1a40;
+  color: #fff;
+}
+
+/* Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+}
+.cursor {
+  display: inline-block;
+  background-color: #fff;
+  margin-left: 2px;
+  width: 2px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Add this at the end of style.css */
+
+/* Toggle Button Style */
+#modeToggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Light Mode (Default) */
+body.light-mode {
+  background-color: #f5f7fa;
+  color: #333;
+}
+body.light-mode header,
+body.light-mode footer {
+  background: #1a1a40;
+  color: white;
+}
+body.light-mode .project {
+  background: white;
+  color: #333;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark-mode header,
+body.dark-mode footer {
+  background: #000000;
+  color: #e0e0e0;
+}
+body.dark-mode nav a {
+  color: #e0e0e0;
+}
+body.dark-mode .project {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+body.dark-mode #modeToggle {
+  color: #f9d71c;
+}
