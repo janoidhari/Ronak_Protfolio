@@ -211,3 +211,21 @@ body.dark-mode .project {
 body.dark-mode #modeToggle {
   color: #f9d71c;
 }
+
+table, th, td{
+  border:solid 1px black;
+  /* padding: 1rem; */
+  /* border-radius: 20px; */
+  border-collapse: collapse;
+  text-align: center;
+  color: rgb(183, 29, 62);
+  
+}
+
+th{
+  padding: 1rem 0;
+  background-color: #0097a7;
+}
+td{
+  background-color: #8cd1da;
+}
